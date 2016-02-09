@@ -1,0 +1,3 @@
+# work in working directory
+git add # add to staging area to isolate work you're doing
+git commit # commit to local repository
