@@ -98,3 +98,24 @@ def subset_sum(numbers, target, partial=[], partial_sum=0):
         remaining = numbers[i + 1:]
         yield from subset_sum(remaining, target, partial + [n], partial_sum + n)
 
+
+def is_funny(s):
+    r = s[::-1]
+    for i in range(1, len(s)):
+        if abs(ord(s[i]) - ord(s[i-1])) != abs(ord(r[i]) - ord(r[i-1])):
+            return "Not Funny"
+
+    return "Funny"
+
+
+def count_deletes(x):
+    d = 0
+    p = 0
+    for i in range(1, len(x)):
+        print(p, x[p], i-1, x[i-1])
+        if x[i] == x[i-1]:
+            d += 1
+        else:
+            p = i + 1
+
+    return d
