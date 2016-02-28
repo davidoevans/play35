@@ -3,6 +3,10 @@ debug_here = Tracer()
 
 
 def can_be_palindrome(s):
+    """
+    :param s: string to be tested
+    :return: "YES" or "NO"
+    """
     ord_s = [ord(x) for x in s]
     while len(ord_s) > 0:
         # debug_here()
@@ -18,6 +22,12 @@ def can_be_palindrome(s):
 
 
 def cbp(s):
+    """
+    :param s: string to be tested
+    :return: "YES" or "NO"
+    """
+
+    """ create list of ASCII values """
     ord_s = [ord(x) for x in s]
     odds = 0
     # debug_here()
@@ -77,14 +87,30 @@ def intersect_w_dupes(x, y):
 
 
 def make_anagram(s):
-    debug_here()
+    """
+    Divide a string into 2 strings and indicate the number of changes that need to be made to the first string
+    to make it an anagram of the second string.
+
+    :param s: input string
+    :return:
+    """
     if len(s) % 2:
         return -1
     else:
         x = s[0:int(len(s) / 2)]
         y = s[int(len(s) / 2):]
-        xs = [{i : x.count(i)} for i in set(x)]
-        ys = [{i : x.count(i)} for i in set(y)]
+        xs = {i: x.count(i) for i in set(x)}
+        ys = {i: y.count(i) for i in set(y)}
 
-        print(xs)
-        print(ys)
+        """ calculate changes required """
+        result = 0
+        debug_here()
+        for i in ys:
+            if i in xs:
+                if xs[i] <= ys[i]:
+                    result += ys[i] - xs[i]
+            else:
+                result += ys[i]
+
+        return result
+
