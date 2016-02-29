@@ -70,12 +70,12 @@ def intersect_w_dupes(x, y):
 
     """ Iterate over union of all keys """
     for i in (set(x_dict.keys()) | set(y_dict.keys())):
-        if x_dict.__contains__(i) and y_dict.__contains__(i):
+        if i in x_dict and i in y_dict:
                 tot += abs(x_dict[i] - y_dict[i])
                 result_dict[i] = tot
-        elif x_dict.__contains__(i):
+        elif i in x_dict:
             tot += x_dict[i]
-            if result_dict.__contains__(i):
+            if i in result_dict:
                 result_dict[i] += x_dict[i]
             else:
                 result_dict = x_dict[i]
