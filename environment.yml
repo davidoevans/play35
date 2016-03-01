@@ -1,5 +1,5 @@
 name: play35
-dependencies:
+dependencies: 
 - openssl=1.0.2f=0
 - pip=8.0.3=py35_0
 - python=3.5.1=0
