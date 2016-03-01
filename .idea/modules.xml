@@ -7,7 +7,6 @@
       <module fileurl="file://$PROJECT_DIR$/../pandas/.idea/pandas.iml" filepath="$PROJECT_DIR$/../pandas/.idea/pandas.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/play35.iml" filepath="$PROJECT_DIR$/.idea/play35.iml" />
       <module fileurl="file://$PROJECT_DIR$/../statsintro/.idea/statsintro.iml" filepath="$PROJECT_DIR$/../statsintro/.idea/statsintro.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../statsintro_python/.idea/statsintro_python.iml" filepath="$PROJECT_DIR$/../statsintro_python/.idea/statsintro_python.iml" />
     </modules>
   </component>
 </project>

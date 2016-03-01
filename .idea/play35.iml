@@ -8,7 +8,6 @@
     <orderEntry type="module" module-name="pandas" />
     <orderEntry type="module" module-name="ipython" />
     <orderEntry type="module" module-name="statsintro" />
-    <orderEntry type="module" module-name="statsintro_python" />
   </component>
   <component name="TestRunnerService">
     <option name="PROJECT_TEST_RUNNER" value="Unittests" />

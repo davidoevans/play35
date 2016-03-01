@@ -7,7 +7,7 @@ This project is a chance for me to play with Python 3.5 and practice a few good 
 * test driven development - using py.test or nose?
 * sphinx-based documentation
 * try out challenges on hackerrank.com
-* get comfortable using virtual environments - virtualenv or conda?
+* get comfortable using virtual environments - virtualenv or conda? - http://stiglerdiet.com/blog/2015/Nov/24/my-python-environment-workflow-with-conda/
 
 
 
