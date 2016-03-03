@@ -104,7 +104,7 @@ def make_anagram(s):
 
         """ calculate changes required """
         result = 0
-        debug_here()
+        # debug_here()
         for i in ys:
             if i in xs:
                 if xs[i] <= ys[i]:
