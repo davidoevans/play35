@@ -1,14 +1,19 @@
+import pytest
 from unittest import TestCase
 
 from practice.string import make_anagram
 
 
-class Test(TestCase):
+@pytest.fixture()
+def anagram_data():
+    return 'hi'
 
-    def test1(self):
-        assert (True == True)
 
-    def test_make_anagram(self):
-        assert make_anagram('aaabbb') == 'YES'
-        assert make_anagram('aaabbc') == 'NO'
+def test1(anagram_data):
+    assert anagram_data == 'hi'
+
+
+def test_make_anagram():
+    assert make_anagram('aaabbb') == 3
+    assert make_anagram('aaabbc') == 3
 
