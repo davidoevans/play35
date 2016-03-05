@@ -1,8 +1,6 @@
 import os
 import pytest
-import fileinput
 import subprocess
-# from practice.string.anagram import make_anagram
 
 
 def curpath():
@@ -15,24 +13,12 @@ def file_paths_for_tests(test_name, test_number="sample"):
     script_path = os.path.join(curpath(), "../practice/string/" + test_name + ".py")
     return data_path + ".in", data_path + ".out", script_path
 
-@pytest.mark.parametrize(("test_name"), [
-    ("anagram"),
-])
-def toast_in_out(capfd, test_name):
-    in_path, out_path, script_path = file_paths_for_tests(test_name)
-    print("\n"+"-"*50)
-    print("in_path %s" % in_path)
-    print("out_path %s" % out_path)
-    with fileinput.input(in_path) as f:
-        for line in f:
-            print(f.filename(), f.lineno(), line, end='')
-
 
 @pytest.mark.parametrize(("test_name", "test_id"), [
     ("anagram", "sample"),
     ("anagram", "1"),
 ])
-def test_process(capfd, test_name, test_id):
+def test_process(test_name, test_id):
     in_path, out_path, script_path = file_paths_for_tests(test_name, test_id)
     print("\n"+"-"*50)
     print("Calling %s" % script_path)
@@ -60,17 +46,4 @@ def func1(s):
 #     expected = open(os.path.join(curpath(), filename_expected), "r").read()
 #     assert resout == expected
 
-
-@pytest.fixture()
-def anagram_data():
-    return 'hi'
-
-
-def test1(anagram_data):
-    assert anagram_data == 'hi'
-
-
-# def test_make_anagram():
-#     assert make_anagram('aaabbb') == 3
-#     assert make_anagram('aaabbc') == 3
 
