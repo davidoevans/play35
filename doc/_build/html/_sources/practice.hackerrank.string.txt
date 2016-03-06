@@ -1,0 +1,11 @@
+string Package
+==============
+
+:mod:`anagram` Module
+---------------------
+
+.. automodule:: practice.hackerrank.string.anagram
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
