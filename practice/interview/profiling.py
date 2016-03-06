@@ -1,3 +1,6 @@
+"""
+Demonstrate profiling
+"""
 import cProfile
 import random
 
@@ -19,8 +22,8 @@ def f3(lIn):
     l2 = sorted(l1)
     return [i for i in l1 if i < (0.5 * 0.5)]
 
-
-lIn = [random.random() for i in range(100000)]
-cProfile.run('f1(lIn)')
-cProfile.run('f2(lIn)')
-cProfile.run('f3(lIn)')
+if __name__ == "__main__":
+    lIn = [random.random() for i in range(100000)]
+    cProfile.run('f1(lIn)')
+    cProfile.run('f2(lIn)')
+    cProfile.run('f3(lIn)')

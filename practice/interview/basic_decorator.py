@@ -1,3 +1,6 @@
+"""
+A basic decorator
+"""
 def time_this(original_function):
     def new_function(*args,**kwargs):
         import datetime
@@ -14,5 +17,6 @@ def func_a():
     import time
     time.sleep(3)
 
-func_a()
+if __name__ == "__main__":
+    func_a()
 

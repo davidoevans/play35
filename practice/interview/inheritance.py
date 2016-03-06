@@ -1,3 +1,6 @@
+"""
+Demonstrate inheritance
+"""
 class A(object):
     def go(self):
         print("go A go!")
@@ -41,43 +44,44 @@ class D(B, C):
 class E(B, C): pass
 
 
-a = A()
-b = B()
-c = C()
-d = D()
-e = E()
+if __name__ == "__main__":
+    a = A()
+    b = B()
+    c = C()
+    d = D()
+    e = E()
 
-# specify output from here onwards
+    # specify output from here onwards
 
-a.go()
-print("-----")
-b.go()
-print("-----")
-c.go()
-print("-----")
-d.go()
-print("-----")
-e.go()
-print("-----")
+    a.go()
+    print("-----")
+    b.go()
+    print("-----")
+    c.go()
+    print("-----")
+    d.go()
+    print("-----")
+    e.go()
+    print("-----")
 
-a.stop()
-print("-----")
-b.stop()
-print("-----")
-c.stop()
-print("-----")
-d.stop()
-print("-----")
-e.stop()
-print("-----")
+    a.stop()
+    print("-----")
+    b.stop()
+    print("-----")
+    c.stop()
+    print("-----")
+    d.stop()
+    print("-----")
+    e.stop()
+    print("-----")
 
-a.pause()
-print("-----")
-b.pause()
-print("-----")
-c.pause()
-print("-----")
-d.pause()
-print("-----")
-e.pause()
-print("-----")
+    a.pause()
+    print("-----")
+    b.pause()
+    print("-----")
+    c.pause()
+    print("-----")
+    d.pause()
+    print("-----")
+    e.pause()
+    print("-----")

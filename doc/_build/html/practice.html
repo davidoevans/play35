@@ -1,97 +1,356 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>play35 - playing with Python 3.5 &mdash; play35 0.1 documentation</title>
-    
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '0.1',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="play35 0.1 documentation" href="index.html" />
-    <link rel="prev" title="Welcome to play35’s documentation!" href="index.html" />
-   
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
   
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>practice Package &mdash; play35 0.1 documentation</title>
+  
 
-  </head>
-  <body role="document">  
+  
+  
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="play35 0.1 documentation" href="index.html"/>
+        <link rel="next" title="hackerrank Package" href="practice.hackerrank.html"/>
+        <link rel="prev" title="Welcome to play35’s documentation!" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> play35
+          
+
+          
+          </a>
+
+          
             
-  <div class="section" id="play35-playing-with-python-3-5">
-<h1>play35 - playing with Python 3.5<a class="headerlink" href="#play35-playing-with-python-3-5" title="Permalink to this headline">¶</a></h1>
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
 </div>
 
+          
+        </div>
 
-          </div>
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">Practice using python 3.5</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1"><code class="docutils literal"><span class="pre">practice</span></code> Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-practice.generate_sphinx"><code class="docutils literal"><span class="pre">generate_sphinx</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="practice.hackerrank.html">hackerrank Package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="practice.interview.html">interview Package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper"><div class="relations">
-<h3>Related Topics</h3>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">play35</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>practice Package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/practice.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="practice-package">
+<h1>practice Package<a class="headerlink" href="#practice-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2><code class="xref py py-mod docutils literal"><span class="pre">practice</span></code> Package<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-practice.__init__"></span><p>This practice module is the heart of what this project is all about.  This is a space for me (and others if they&#8217;d like)
+to practice their python v3.5 programming.</p>
+<p>Ideally, this will use &#8216;best practices&#8217; which includes keeping this Sphinx-based documentation up to date and ensuring
+there are good tests in place.</p>
+</div>
+<div class="section" id="module-practice.generate_sphinx">
+<span id="generate-sphinx-module"></span><h2><code class="xref py py-mod docutils literal"><span class="pre">generate_sphinx</span></code> Module<a class="headerlink" href="#module-practice.generate_sphinx" title="Permalink to this headline">¶</a></h2>
+<p>sphinx-autopackage-script</p>
+<p>I copied this from <a class="reference external" href="https://bitbucket.org/etienned/sphinx-autopackage-script/src">https://bitbucket.org/etienned/sphinx-autopackage-script/src</a></p>
+<p>This script parses a directory tree looking for python modules and packages and
+creates ReST files appropriately to create code documentation with Sphinx.
+It also creates a modules index (named modules.&lt;suffix&gt;).</p>
+<dl class="function">
+<dt id="practice.generate_sphinx.create_module_file">
+<code class="descclassname">practice.generate_sphinx.</code><code class="descname">create_module_file</code><span class="sig-paren">(</span><em>package</em>, <em>module</em>, <em>opts</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/practice/generate_sphinx.html#create_module_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#practice.generate_sphinx.create_module_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build the text of the file and write the file.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="practice.generate_sphinx.create_modules_toc_file">
+<code class="descclassname">practice.generate_sphinx.</code><code class="descname">create_modules_toc_file</code><span class="sig-paren">(</span><em>master_package</em>, <em>modules</em>, <em>opts</em>, <em>name='modules'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/practice/generate_sphinx.html#create_modules_toc_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#practice.generate_sphinx.create_modules_toc_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create the module&#8217;s index.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="practice.generate_sphinx.create_package_file">
+<code class="descclassname">practice.generate_sphinx.</code><code class="descname">create_package_file</code><span class="sig-paren">(</span><em>root</em>, <em>master_package</em>, <em>subroot</em>, <em>py_files</em>, <em>opts</em>, <em>subs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/practice/generate_sphinx.html#create_package_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#practice.generate_sphinx.create_package_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build the text of the file and write the file.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="practice.generate_sphinx.format_directive">
+<code class="descclassname">practice.generate_sphinx.</code><code class="descname">format_directive</code><span class="sig-paren">(</span><em>module</em>, <em>package=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/practice/generate_sphinx.html#format_directive"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#practice.generate_sphinx.format_directive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create the automodule directive and add the options.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="practice.generate_sphinx.format_heading">
+<code class="descclassname">practice.generate_sphinx.</code><code class="descname">format_heading</code><span class="sig-paren">(</span><em>level</em>, <em>text</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/practice/generate_sphinx.html#format_heading"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#practice.generate_sphinx.format_heading" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a heading of &lt;level&gt; [1, 2 or 3 supported].</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="practice.generate_sphinx.is_excluded">
+<code class="descclassname">practice.generate_sphinx.</code><code class="descname">is_excluded</code><span class="sig-paren">(</span><em>root</em>, <em>excludes</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/practice/generate_sphinx.html#is_excluded"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#practice.generate_sphinx.is_excluded" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the directory is in the exclude list.</p>
+<dl class="docutils">
+<dt>Note: by having trailing slashes, we avoid common prefix issues, like</dt>
+<dd>e.g. an exlude &#8220;foo&#8221; also accidentally excluding &#8220;foobar&#8221;.</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="practice.generate_sphinx.main">
+<code class="descclassname">practice.generate_sphinx.</code><code class="descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/practice/generate_sphinx.html#main"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#practice.generate_sphinx.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse and check the command line arguments.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="practice.generate_sphinx.makename">
+<code class="descclassname">practice.generate_sphinx.</code><code class="descname">makename</code><span class="sig-paren">(</span><em>package</em>, <em>module</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/practice/generate_sphinx.html#makename"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#practice.generate_sphinx.makename" title="Permalink to this definition">¶</a></dt>
+<dd><p>Join package and module with a dot.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="practice.generate_sphinx.normalize_excludes">
+<code class="descclassname">practice.generate_sphinx.</code><code class="descname">normalize_excludes</code><span class="sig-paren">(</span><em>rootpath</em>, <em>excludes</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/practice/generate_sphinx.html#normalize_excludes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#practice.generate_sphinx.normalize_excludes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Normalize the excluded directory list:
+* must be either an absolute path or start with rootpath,
+* otherwise it is joined with rootpath
+* with trailing slash</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="practice.generate_sphinx.recurse_tree">
+<code class="descclassname">practice.generate_sphinx.</code><code class="descname">recurse_tree</code><span class="sig-paren">(</span><em>path</em>, <em>excludes</em>, <em>opts</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/practice/generate_sphinx.html#recurse_tree"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#practice.generate_sphinx.recurse_tree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Look for every file in the directory tree and create the corresponding
+ReST files.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="practice.generate_sphinx.shall_skip">
+<code class="descclassname">practice.generate_sphinx.</code><code class="descname">shall_skip</code><span class="sig-paren">(</span><em>module</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/practice/generate_sphinx.html#shall_skip"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#practice.generate_sphinx.shall_skip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if we want to skip this module.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="practice.generate_sphinx.write_file">
+<code class="descclassname">practice.generate_sphinx.</code><code class="descname">write_file</code><span class="sig-paren">(</span><em>name</em>, <em>text</em>, <em>opts</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/practice/generate_sphinx.html#write_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#practice.generate_sphinx.write_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write the output file for module/package &lt;name&gt;.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
 <ul>
-  <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="index.html" title="previous chapter">Welcome to play35&#8217;s documentation!</a></li>
-  </ul></li>
+<li class="toctree-l1"><a class="reference internal" href="practice.hackerrank.html">hackerrank Package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="practice.hackerrank.html#id1"><code class="docutils literal"><span class="pre">hackerrank</span></code> Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practice.hackerrank.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="practice.hackerrank.algorithms.html">algorithms Package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="practice.hackerrank.algorithms.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="practice.hackerrank.algorithms.dynamic_programming.html">dynamic_programming Package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="practice.hackerrank.algorithms.dynamic_programming.html#module-practice.hackerrank.algorithms.dynamic_programming.dynamic"><code class="docutils literal"><span class="pre">dynamic</span></code> Module</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="practice.hackerrank.algorithms.implementation.html">implementation Package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="practice.hackerrank.algorithms.implementation.html#module-practice.hackerrank.algorithms.implementation.decent_number"><code class="docutils literal"><span class="pre">decent_number</span></code> Module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="practice.hackerrank.algorithms.implementation.html#utopian-tree-module"><code class="docutils literal"><span class="pre">utopian_tree</span></code> Module</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="practice.hackerrank.algorithms.sorting.html">sorting Package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="practice.hackerrank.algorithms.sorting.html#module-practice.hackerrank.algorithms.sorting.insertion_sort1"><code class="docutils literal"><span class="pre">insertion_sort1</span></code> Module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="practice.hackerrank.algorithms.sorting.html#module-practice.hackerrank.algorithms.sorting.insertion_sort2"><code class="docutils literal"><span class="pre">insertion_sort2</span></code> Module</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="practice.hackerrank.algorithms.string.html">string Package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="practice.hackerrank.algorithms.string.html#module-practice.hackerrank.algorithms.string.anagram"><code class="docutils literal"><span class="pre">anagram</span></code> Module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="practice.hackerrank.algorithms.string.html#string-tmp-module"><code class="docutils literal"><span class="pre">string_tmp</span></code> Module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="practice.interview.html">interview Package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="practice.interview.html#id1"><code class="docutils literal"><span class="pre">interview</span></code> Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practice.interview.html#module-practice.interview.args"><code class="docutils literal"><span class="pre">args</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practice.interview.html#module-practice.interview.basic_decorator"><code class="docutils literal"><span class="pre">basic_decorator</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practice.interview.html#module-practice.interview.composition"><code class="docutils literal"><span class="pre">composition</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practice.interview.html#module-practice.interview.inheritance"><code class="docutils literal"><span class="pre">inheritance</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practice.interview.html#module-practice.interview.list_comprehension"><code class="docutils literal"><span class="pre">list_comprehension</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practice.interview.html#module-practice.interview.list_dirs"><code class="docutils literal"><span class="pre">list_dirs</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practice.interview.html#module-practice.interview.profiling"><code class="docutils literal"><span class="pre">profiling</span></code> Module</a></li>
+</ul>
+</li>
 </ul>
 </div>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/practice.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="practice.hackerrank.html" class="btn btn-neutral float-right" title="hackerrank Package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Welcome to play35’s documentation!" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, David Evans.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
         </div>
       </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &copy;2016, David Evans.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.5</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
-      
-      |
-      <a href="_sources/practice.txt"
-          rel="nofollow">Page source</a>
-    </div>
 
-    
+    </section>
 
-    
-  </body>
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
 </html>

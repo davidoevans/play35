@@ -1,3 +1,6 @@
+"""
+A function to recursively print the content of a directory
+"""
 def print_directory_contents(sPath):
     """
     This function takes the name of a directory
@@ -17,4 +20,5 @@ def print_directory_contents(sPath):
         else:
             print(sChildPath)
 
-print_directory_contents(".")
+if __name__ == "__main__":
+    print_directory_contents(".")

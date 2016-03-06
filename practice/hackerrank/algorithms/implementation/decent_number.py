@@ -1,3 +1,6 @@
+"""
+Solve the `Sherlock and the Beast Challenge <https://www.hackerrank.com/challenges/sherlock-and-the-beast>_
+"""
 import random
 import math
 import itertools
