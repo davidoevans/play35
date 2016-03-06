@@ -1,0 +1,1 @@
+Search.setIndex({envversion:47,filenames:["index","practice"],objects:{},objnames:{},objtypes:{},terms:{content:0,index:0,modul:0,page:0,practic:0,python:[],search:0},titles:["Welcome to play35&#8217;s documentation!","play35 - playing with Python 3.5"],titleterms:{about:[],all:[],document:0,indic:0,plai:1,play35:[0,1],python:1,tabl:0,welcom:0}})
