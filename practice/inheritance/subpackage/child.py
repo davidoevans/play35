@@ -1,9 +1,14 @@
 from practice.inheritance.parent import Parent
 
+
 class Child(Parent):
-    """
-    nothing
-    """
+
+    def __init__(self):
+        """
+        Do nothing
+        :return:
+        """
+        super().__init__(__file__)
 
 
 if __name__ == "__main__":
