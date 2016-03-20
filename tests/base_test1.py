@@ -25,7 +25,14 @@ programatically inserting interupts using `IPython.core.debugger` will cause tes
 fact that the script to be tested is executed as a `subprocess`.
 2. Only supports the parallel directory structure described above.
 3. Sloppy and likely poor use of inheritance.
+* if sticking with inheritance, consider using @abstractmethod
+* use composition instead?
+* create a mixin instead?  (i.e. TestPathMixin)
+*
+* other?
 4. Test that inherit from BaseTest consist of duplicate copy/paste implementations.
+5. Required to create an import that appears unused.
+* `from tests.base.base_test import pytest_generate_tests`
 
 """
 import os
@@ -86,4 +93,5 @@ class BaseTest:
         out = proc.communicate()[0].decode("utf-8")
         assert expected == out
         print("\n"+"-"*50)
+
 
