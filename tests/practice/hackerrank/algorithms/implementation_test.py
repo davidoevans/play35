@@ -7,9 +7,15 @@ from tests.base import open_to_stdin
 BASE_DIR = "/Users/davidevans/PycharmProjects/play35/"
 
 
-def test_decent_number(capsys):
-    in_path = BASE_DIR + "tests/data/practice/hackerrank/algorithms/implementation/decent_number_2.in"
-    out_path = BASE_DIR + "tests/data/practice/hackerrank/algorithms/implementation/decent_number_2.out"
+@pytest.mark.parametrize("in_data,out_data",
+                         [("tests/data/practice/hackerrank/algorithms/implementation/decent_number_2.in",
+                           "tests/data/practice/hackerrank/algorithms/implementation/decent_number_2.out"),
+                          ("tests/data/practice/hackerrank/algorithms/implementation/decent_number_sample.in",
+                           "tests/data/practice/hackerrank/algorithms/implementation/decent_number_sample.out"),
+                          ])
+def test_decent_number(capsys, in_data, out_data):
+    in_path = BASE_DIR + in_data
+    out_path = BASE_DIR + out_data
     with open_to_stdin(in_path):
         t = int(input().strip())
         for a0 in range(t):
@@ -23,26 +29,32 @@ def test_decent_number(capsys):
     assert out == expected
 
 
-def test_grid_search(capsys):
-    in_path = BASE_DIR + "tests/data/practice/hackerrank/algorithms/implementation/grid_search_sample.in"
-    out_path = BASE_DIR + "tests/data/practice/hackerrank/algorithms/implementation/grid_search_sample.out"
+@pytest.mark.parametrize("in_data, out_data",
+                         [("tests/data/practice/hackerrank/algorithms/implementation/grid_search_sample.in",
+                           "tests/data/practice/hackerrank/algorithms/implementation/grid_search_sample.out"),
+                          ("tests/data/practice/hackerrank/algorithms/implementation/grid_search_7.in",
+                           "tests/data/practice/hackerrank/algorithms/implementation/grid_search_7.out")
+                          ])
+def test_grid_search(capsys, in_data, out_data):
+    in_path = BASE_DIR + in_data
+    out_path = BASE_DIR + out_data
     with open_to_stdin(in_path):
         t = int(input().strip())
         for a0 in range(t):
-            R,C = input().strip().split(' ')
-            R,C = [int(R),int(C)]
+            R, C = input().strip().split(' ')
+            R, C = [int(R), int(C)]
             G = []
             G_i = 0
             for G_i in range(R):
-               G_t = str(input().strip())
-               G.append(G_t)
-            r,c = input().strip().split(' ')
-            r,c = [int(r),int(c)]
+                G_t = str(input().strip())
+                G.append(G_t)
+            r, c = input().strip().split(' ')
+            r, c = [int(r), int(c)]
             P = []
             P_i = 0
             for P_i in range(r):
-               P_t = str(input().strip())
-               P.append(P_t)
+                P_t = str(input().strip())
+                P.append(P_t)
 
             print(grid_search(P, G))
 
@@ -51,9 +63,13 @@ def test_grid_search(capsys):
     assert out == expected
 
 
-def test_utopian_tree(capsys):
-    in_path = BASE_DIR + "tests/data/practice/hackerrank/algorithms/implementation/utopian_tree_sample.in"
-    out_path = BASE_DIR + "tests/data/practice/hackerrank/algorithms/implementation/utopian_tree_sample.out"
+@pytest.mark.parametrize("in_data, out_data",
+                         [("tests/data/practice/hackerrank/algorithms/implementation/utopian_tree_sample.in",
+                           "tests/data/practice/hackerrank/algorithms/implementation/utopian_tree_sample.out")
+                          ])
+def test_utopian_tree(capsys, in_data, out_data):
+    in_path = BASE_DIR + in_data
+    out_path = BASE_DIR + out_data
     with open_to_stdin(in_path):
         t = int(input().strip())
         for a0 in range(t):
@@ -63,4 +79,3 @@ def test_utopian_tree(capsys):
     out, err = capsys.readouterr()
     expected = open(out_path, "r").read()
     assert out == expected
-
