@@ -7,9 +7,13 @@ from practice.hackerrank.algorithms.sorting import insertion_sort3
 BASE_DIR = "/Users/davidevans/PycharmProjects/play35/"
 
 
-def test_insertion_sort1(capsys):
-    in_path = BASE_DIR + "tests/data/practice/hackerrank/algorithms/sorting/insertion_sort1_sample.in"
-    out_path = BASE_DIR + "tests/data/practice/hackerrank/algorithms/sorting/insertion_sort1_sample.out"
+@pytest.mark.parametrize("in_data, out_data", [
+    ("tests/data/practice/hackerrank/algorithms/sorting/insertion_sort1_sample.in",
+     "tests/data/practice/hackerrank/algorithms/sorting/insertion_sort1_sample.out")
+])
+def test_insertion_sort1(capsys, in_data, out_data):
+    in_path = BASE_DIR + in_data
+    out_path = BASE_DIR + out_data
 
     with open_to_stdin(in_path):
         n = int(input().split()[0])
@@ -20,10 +24,13 @@ def test_insertion_sort1(capsys):
     expected = open(out_path, "r").read()
     assert out == expected
 
-
-def test_insertion_sort2(capsys):
-    in_path = BASE_DIR + "tests/data/practice/hackerrank/algorithms/sorting/insertion_sort2_sample.in"
-    out_path = BASE_DIR + "tests/data/practice/hackerrank/algorithms/sorting/insertion_sort2_sample.out"
+@pytest.mark.parametrize("in_data, out_data", [
+    ("tests/data/practice/hackerrank/algorithms/sorting/insertion_sort2_sample.in",
+     "tests/data/practice/hackerrank/algorithms/sorting/insertion_sort2_sample.out")
+])
+def test_insertion_sort2(capsys, in_data, out_data):
+    in_path = BASE_DIR + in_data
+    out_path = BASE_DIR + out_data
 
     with open_to_stdin(in_path):
         n = input()
