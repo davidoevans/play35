@@ -1,6 +1,7 @@
 import re
 import itertools
 
+
 def decent_number(n):
     if n < 10:
         set_of_threes = ['33333' * (i+1) for i in range(int(n/5))]
@@ -26,23 +27,23 @@ def decent_number(n):
                 return int(z * '5' + (n-z) * '3')
 
 
-def grid_search(P, G):
-    result = ""
-    # debug_here()
-    for G_i in range(len(G)):
-        for found in re.finditer(P[0], G[G_i]):
-            start_column = found.start()
-            start_row = G_i
-            result = "YES"
-            for P_i in range(1, len(P)):
+def grid_search(p, g):
+    """
+    Solution to the https://www.hackerrank.com/challenges/the-grid-search challenge.
 
-                if G[G_i + P_i].find(P[P_i]) == start_column:
-                    result = "YES"
-                else:
-                    result = "NO"
-                    break
-
-    return result
+    Note that the regular expression repeats the search at every index which decreases performance but catches
+    edge cases where the submatrix contains repeating characters.  See test #9.
+    
+    :param p: parent matrix
+    :param g: submatrix to find
+    :return: YES if submatrix found in parent, otherwise NO
+    """
+    for g_i in range(len(g)):
+        for found in re.finditer(r'(?=(' + p[0] + '))', g[g_i]):
+            if found.start() + len(p[0]) <= len(g[0]):
+                if [g[i][found.start():len(p[0]) + found.start()] for i in range(g_i, len(p) + g_i)] == p:
+                    return "YES"
+    return "NO"
 
 
 def utopian_tree(n):
