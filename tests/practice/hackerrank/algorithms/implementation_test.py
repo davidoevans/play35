@@ -33,7 +33,9 @@ def test_decent_number(capsys, in_data, out_data):
                          [("tests/data/practice/hackerrank/algorithms/implementation/grid_search_sample.in",
                            "tests/data/practice/hackerrank/algorithms/implementation/grid_search_sample.out"),
                           ("tests/data/practice/hackerrank/algorithms/implementation/grid_search_7.in",
-                           "tests/data/practice/hackerrank/algorithms/implementation/grid_search_7.out")
+                           "tests/data/practice/hackerrank/algorithms/implementation/grid_search_7.out"),
+                          ("tests/data/practice/hackerrank/algorithms/implementation/grid_search_9.in",
+                           "tests/data/practice/hackerrank/algorithms/implementation/grid_search_9.out")
                           ])
 def test_grid_search(capsys, in_data, out_data):
     in_path = BASE_DIR + in_data
