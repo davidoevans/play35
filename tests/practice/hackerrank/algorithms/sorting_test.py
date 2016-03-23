@@ -3,6 +3,7 @@ from tests.base import open_to_stdin
 from practice.hackerrank.algorithms.sorting import insertion_sort1
 from practice.hackerrank.algorithms.sorting import insertion_sort2
 from practice.hackerrank.algorithms.sorting import insertion_sort3
+from practice.hackerrank.algorithms.sorting import running_time
 
 BASE_DIR = "/Users/davidevans/PycharmProjects/play35/"
 
@@ -54,6 +55,23 @@ def test_correctness_invariant(capsys, in_data, out_data):
         ar = [int(i) for i in input().strip().split()]
         insertion_sort3(ar)
         print(" ".join(map(str, ar)))
+
+    out, err = capsys.readouterr()
+    expected = open(out_path, "r").read()
+    assert out == expected
+
+
+@pytest.mark.parametrize("in_data, out_data", [
+    ("tests/data/practice/hackerrank/algorithms/sorting/running_time_sample.in",
+     "tests/data/practice/hackerrank/algorithms/sorting/running_time_sample.out")
+])
+def test_running_time(capsys, in_data, out_data):
+    in_path = BASE_DIR + in_data
+    out_path = BASE_DIR + out_data
+    with open_to_stdin(in_path):
+        m = int(input().strip())
+        ar = [int(i) for i in input().strip().split()]
+        print(running_time(ar))
 
     out, err = capsys.readouterr()
     expected = open(out_path, "r").read()
