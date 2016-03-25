@@ -12,6 +12,7 @@ if __name__ == "__main__":
     A4 = [i for i in A1 if i in A3]
     A5 = {i: i * i for i in A1}
     A6 = [[i, i * i] for i in A1]
+    A7 = [i for s in [A1, A2, A3] for i in s]
 
-    for i in ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6']:
+    for i in ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7']:
         print_result(i)
