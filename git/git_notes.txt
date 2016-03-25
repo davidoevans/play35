@@ -2,3 +2,4 @@
 git add # add to staging area to isolate work you're doing
 git commit # commit to local repository
 git add . -p # stage fractions of files
+git reset --soft HEAD~ # undo the previous commit
