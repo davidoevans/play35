@@ -19,20 +19,25 @@ directory/package structure parallel to the test script.
 * input data - data/<path_to_test_script>/<test_name>_<test_id>.in
 * output data - data/<path_to_test_script>/<test_name>_<test_id>.out
 
-# Limitations of this implementation
-1. Cannot debug the script during testing. Attempts to set breakpoints in an IDE will not be recognized and
-programatically inserting interupts using `IPython.core.debugger` will cause test failure.  This is due to the
-fact that the script to be tested is executed as a `subprocess`.
-2. Only supports the parallel directory structure described above.
+# This version fixed the following issues with the initial attempt.
+1. Cannot debug the script during testing.
+The initial attempt created subprocesses and piped the input file to them.  Attempts to set breakpoints in an IDE
+will not be recognized and programatically inserting interupts using `IPython.core.debugger` will cause test failure.
+This was due to the fact that the script to be tested is executed as a `subprocess`.
+# The Fix
+Created a `@contextmanager` that sets the input file to STDIN
+2. Only supported the parallel directory structure described above.
+# The Fix
 3. Sloppy and likely poor use of inheritance.
-* if sticking with inheritance, consider using @abstractmethod
-* use composition instead?
-* create a mixin instead?  (i.e. TestPathMixin)
-*
 * other?
 4. Test that inherit from BaseTest consist of duplicate copy/paste implementations.
+# The Fix
+No longer need to copy/past code since the contextmanager
 5. Required to create an import that appears unused.
 * `from tests.base.base_test import pytest_generate_tests`
+# The Fix
+No longer using the metafunc ??.  Instead, using `@pytest.mark.parametrize`
+
 """
 
 import os
