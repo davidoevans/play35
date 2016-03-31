@@ -67,3 +67,15 @@ def running_time(alist):
 
         alist[position] = current_value
     return shifts
+
+
+def counting_sort3(l):
+    """
+    There's not a nice way to fit this into a list comprehension so am implementing as a generator.
+    :param l:
+    :return:
+    """
+    count = 0
+    for x in range(0, 100):
+        count += l.count(x)
+        yield count
