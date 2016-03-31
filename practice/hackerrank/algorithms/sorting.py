@@ -79,3 +79,22 @@ def counting_sort3(l):
     for x in range(0, 100):
         count += l.count(x)
         yield count
+
+def quick_sort1(l):
+    """
+    Solve the first quick sort challenge.
+
+    :param l:
+    :return:
+    """
+    mid = [l[0]]
+    left = []
+    right = []
+    for i in l[1:]:
+        if i == l[0]:
+            mid.append(i)
+        elif i < l[0]:
+            left.append(i)
+        else:
+            right.append(i)
+    return " ".join(repr(e) for e in left + mid + right)

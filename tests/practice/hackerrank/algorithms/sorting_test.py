@@ -5,6 +5,7 @@ from practice.hackerrank.algorithms.sorting import insertion_sort2
 from practice.hackerrank.algorithms.sorting import insertion_sort3
 from practice.hackerrank.algorithms.sorting import running_time
 from practice.hackerrank.algorithms.sorting import counting_sort3
+from practice.hackerrank.algorithms.sorting import quick_sort1
 
 BASE_DIR = "/Users/davidevans/PycharmProjects/play35/"
 
@@ -90,6 +91,22 @@ def test_counting_sort3(capsys, in_data, out_data):
         m = int(input().strip())
         ar = [int(input().strip().split()[0]) for x in range(m)]
         print(" ".join(repr(e) for e in list(counting_sort3(ar))))
+
+    out, err = capsys.readouterr()
+    expected = open(out_path, "r").read()
+    assert out == expected
+
+@pytest.mark.parametrize("in_data, out_data", [
+    ("tests/data/practice/hackerrank/algorithms/sorting/quick_sort1_sample.in",
+     "tests/data/practice/hackerrank/algorithms/sorting/quick_sort1_sample.out")
+])
+def test_quick_sort1(capsys, in_data, out_data):
+    in_path = BASE_DIR + in_data
+    out_path = BASE_DIR + out_data
+    with open_to_stdin(in_path):
+        m = int(input().strip())
+        ar = [int(i) for i in input().strip().split()]
+        print(quick_sort1(ar))
 
     out, err = capsys.readouterr()
     expected = open(out_path, "r").read()
