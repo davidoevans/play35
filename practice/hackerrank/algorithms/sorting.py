@@ -98,3 +98,33 @@ def quick_sort1(l):
         else:
             right.append(i)
     return " ".join(repr(e) for e in left + mid + right)
+
+
+def quick_sort2(l):
+    """
+    Solve the second quick sort challenge.
+
+    :param l:
+    :return:
+    """
+    mid = []
+    left = []
+    right = []
+    if len(l) > 1:
+        mid.append(l[0])
+        for i in l[1:]:
+            if i == l[0]:
+                mid.append(i)
+            elif i < l[0]:
+                left.append(i)
+            else:
+                right.append(i)
+        left = quick_sort2(left)
+        if len(left) > 1:
+            print(" ".join(repr(x) for x in left))
+        right = quick_sort2(right)
+        if len(right) > 1:
+            print(" ".join(repr(x) for x in right))
+        return left + mid + right
+    else:
+        return l
