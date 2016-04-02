@@ -8,6 +8,7 @@ from practice.hackerrank.algorithms.sorting import counting_sort3
 from practice.hackerrank.algorithms.sorting import quick_sort1
 from practice.hackerrank.algorithms.sorting import quick_sort2
 from practice.hackerrank.algorithms.sorting import quick_sort3
+from practice.hackerrank.algorithms.sorting import bigger_is_greater
 
 BASE_DIR = "/Users/davidevans/PycharmProjects/play35/"
 
@@ -142,6 +143,24 @@ def test_quick_sort3(capsys, in_data, out_data):
         m = int(input().strip())
         ar = [int(i) for i in input().strip().split()]
         quick_sort3(ar, 0, len(ar)-1)
+
+    out, err = capsys.readouterr()
+    expected = open(out_path, "r").read()
+    assert out == expected
+
+@pytest.mark.parametrize("in_data, out_data", [
+    ("tests/data/practice/hackerrank/algorithms/sorting/bigger_is_greater_sample.in",
+     "tests/data/practice/hackerrank/algorithms/sorting/bigger_is_greater_sample.out"),
+    ("tests/data/practice/hackerrank/algorithms/sorting/bigger_is_greater_1.in",
+     "tests/data/practice/hackerrank/algorithms/sorting/bigger_is_greater_1.out")
+])
+def test_bigger_is_greater(capsys, in_data, out_data):
+    in_path = BASE_DIR + in_data
+    out_path = BASE_DIR + out_data
+    with open_to_stdin(in_path):
+        m = int(input().strip())
+        for i in range(m):
+            print(bigger_is_greater(input()))
 
     out, err = capsys.readouterr()
     expected = open(out_path, "r").read()
