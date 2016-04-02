@@ -128,3 +128,33 @@ def quick_sort2(l):
         return left + mid + right
     else:
         return l
+
+
+def quick_sort3(l, lo, hi):
+    """
+    Solve the quick_sort 3 challenge with involves doing a quicksort  inplace using the Lomuto partition scheme.
+
+    https://www.hackerrank.com/challenges/quicksort3
+    
+    :param l:
+    :param lo:
+    :param hi:
+    :return:
+    """
+    if lo < hi:
+        p = partition(l, lo, hi)
+        print(" ".join(repr(x) for x in l))
+
+        quick_sort3(l, lo, p-1)
+        quick_sort3(l, p+1, hi)
+
+
+def partition(l, lo, hi):
+    pivot = l[hi]
+    i = lo # index for swapping
+    for j in range(lo, hi):
+        if l[j] <= pivot:
+            l[i], l[j] = l[j], l[i]
+            i += 1
+    l[i], l[hi] = l[hi], l[i]
+    return i
