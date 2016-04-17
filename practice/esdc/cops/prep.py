@@ -1,6 +1,7 @@
 import pandas as pd
 import datetime as dt
 
+
 def melt_employment():
     """
     The original CSV downloaded from open.canada has dates as columns and needs to be reformated as rows for
